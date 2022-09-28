@@ -3,16 +3,32 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/24123/code/Applicationtest/app/src/main/res/drawable-v24/ic____txl.xml" value="0.213" />
+        <entry key="..\:/24123/code/Applicationtest/app/src/main/res/drawable-v24/ic____txl_this.xml" value="0.213" />
+        <entry key="..\:/24123/code/Applicationtest/app/src/main/res/drawable-v24/ic___fx_this.xml" value="0.213" />
+        <entry key="..\:/24123/code/Applicationtest/app/src/main/res/drawable-v24/ic___me_this.xml" value="0.213" />
+        <entry key="..\:/24123/code/Applicationtest/app/src/main/res/drawable-v24/ic___txl.xml" value="0.1065" />
+        <entry key="..\:/24123/code/Applicationtest/app/src/main/res/drawable-v24/ic___wx_this.xml" value="0.213" />
+        <entry key="..\:/24123/code/Applicationtest/app/src/main/res/drawable-v24/underline.xml" value="0.375" />
+        <entry key="..\:/24123/code/Applicationtest/app/src/main/res/drawable/ic_____fx.xml" value="0.213" />
+        <entry key="..\:/24123/code/Applicationtest/app/src/main/res/drawable/ic____txl_this.xml" value="0.1" />
+        <entry key="..\:/24123/code/Applicationtest/app/src/main/res/drawable/ic___fx.xml" value="0.1065" />
+        <entry key="..\:/24123/code/Applicationtest/app/src/main/res/drawable/ic___me.xml" value="0.1065" />
+        <entry key="..\:/24123/code/Applicationtest/app/src/main/res/drawable/ic___txl_this.xml" value="0.1065" />
+        <entry key="..\:/24123/code/Applicationtest/app/src/main/res/drawable/ic___wx.xml" value="0.1065" />
         <entry key="..\:/24123/code/Applicationtest/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1785" />
         <entry key="..\:/24123/code/Applicationtest/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/24123/code/Applicationtest/app/src/main/res/layout/activity_main2.xml" value="0.21666666666666667" />
         <entry key="..\:/24123/code/Applicationtest/app/src/main/res/layout/fragment_1.xml" value="0.55" />
-        <entry key="..\:/24123/code/Applicationtest/app/src/main/res/layout/tab.xml" value="0.26038781163434904" />
+        <entry key="..\:/24123/code/Applicationtest/app/src/main/res/layout/item.xml" value="0.17074275362318841" />
+        <entry key="..\:/24123/code/Applicationtest/app/src/main/res/layout/tab.xml" value="0.75" />
         <entry key="..\:/24123/code/Applicationtest/app/src/main/res/layout/tab01.xml" value="0.25" />
         <entry key="..\:/24123/code/Applicationtest/app/src/main/res/layout/tab02.xml" value="0.25" />
         <entry key="..\:/24123/code/Applicationtest/app/src/main/res/layout/tab03.xml" value="0.25" />
         <entry key="..\:/24123/code/Applicationtest/app/src/main/res/layout/tab04.xml" value="0.165" />
         <entry key="..\:/24123/code/Applicationtest/app/src/main/res/layout/top.xml" value="0.1934156378600823" />
         <entry key="..\:/24123/code/Applicationtest/app/src/main/res/layout/twolayout.xml" value="0.165" />
+        <entry key="..\:/24123/code/Applicationtest/app/src/main/res/layout/underline.xml" value="0.1503623188405797" />
       </map>
     </option>
   </component>

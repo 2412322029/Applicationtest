@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <style name="myTheme" parent="Theme.AppCompat.Light.DarkActionBar" tools:ignore="DuplicateDefinition">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:navigationBarColor">#00000000</item>
+
+
+        <item name="android:statusBarColor">#00000000</item> <!-- 设置状态栏背景色为透明 -->
+
+        <item name="android:windowLightStatusBar">true
+        </item> <!-- 设置状态栏文字色为深色, true为深色, false为白色 -->
+        <item name="android:windowLightNavigationBar">true
+        </item> <!-- 设置导航栏文字色为深色, true为深色, false为白色 -->
+
+    </style>
+</resources>

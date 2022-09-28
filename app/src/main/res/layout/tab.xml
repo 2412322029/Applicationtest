@@ -10,10 +10,12 @@
         android:id="@+id/LinearLayout0"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#807C7C"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent">
+        android:paddingBottom="10dp"
+        android:background="@drawable/underline"
+        app:layout_constraintTop_toTopOf="parent"
+        android:baselineAligned="false">
 
         <LinearLayout
             android:id="@+id/LinearLayout1"
@@ -28,12 +30,13 @@
                 android:id="@+id/imageView1"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                app:srcCompat="@drawable/wx" />
+                app:srcCompat="@drawable/ic___wx" />
 
             <TextView
                 android:id="@+id/textView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="12dp"
                 android:layout_gravity="center"
                 android:text="微信" />
         </LinearLayout>
@@ -51,12 +54,13 @@
                 android:id="@+id/imageView2"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                app:srcCompat="@drawable/tx" />
+                app:srcCompat="@drawable/ic___txl" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="12dp"
                 android:layout_gravity="center"
 
                 android:text="通讯录" />
@@ -75,12 +79,13 @@
                 android:id="@+id/imageView3"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                app:srcCompat="@drawable/s" />
+                app:srcCompat="@drawable/ic___fx" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="12dp"
                 android:layout_gravity="center"
 
                 android:text="发现" />
@@ -100,12 +105,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
 
-                app:srcCompat="@drawable/me" />
+                app:srcCompat="@drawable/ic___me" />
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="12dp"
                 android:layout_gravity="center"
 
                 android:text="我" />
