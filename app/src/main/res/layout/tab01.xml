@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/hui"
     android:orientation="vertical">
 
 
@@ -14,7 +15,7 @@
         android:layout_weight="1"
         android:gravity="center"
         android:text="微信"
-        android:textSize="40dp" />
+        android:textSize="30dp" />
 
     <Button
         android:id="@+id/button_tab01"

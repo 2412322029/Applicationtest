@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout_item1"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@drawable/underline_list">
+
+    <ImageView
+        android:id="@+id/imageView_item1"
+        android:layout_width="81dp"
+        android:layout_height="53dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/ic___wx_this" />
+
+    <TextView
+        android:id="@+id/textView_item1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="编号"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/textView_item2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+
+        android:text="内容"
+        android:textSize="16dp" />
+</LinearLayout>

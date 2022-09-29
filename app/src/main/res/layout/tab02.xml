@@ -1,45 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="@color/hui"
     android:layout_height="match_parent">
 
-    <ScrollView
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:contentDescription="@string/appbar_scrolling_view_behavior">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:textSize="50dp"
-                android:text="TextView11111111111" />
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:textSize="50dp"
-                android:text="TextView2222222222222" />
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:textSize="50dp"
-                android:text="TextView3333333333" />
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="match_parent"
-                android:layout_height="400dp"
-                android:textSize="50dp"
-                android:text="TextView4444444444444" />
-        </LinearLayout>
-    </ScrollView>
+        android:overScrollMode="never"
+        android:scrollbars="none" />
 </LinearLayout>

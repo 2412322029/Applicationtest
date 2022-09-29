@@ -120,8 +120,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             default:
                 break;
         }
-
-
     }
 
     private void hideall(FragmentTransaction transaction){

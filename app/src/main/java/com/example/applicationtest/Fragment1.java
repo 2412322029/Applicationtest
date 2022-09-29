@@ -35,7 +35,6 @@ public class Fragment1 extends Fragment {
                 Log.d("ss", "1->2ok");
                 Intent intent = new Intent(getActivity(), TwoActivity.class);
                 startActivity(intent);
-                getActivity().overridePendingTransition(android.R.anim.fade_in, android.R.anim.slide_in_left);
             }
         });
     }
