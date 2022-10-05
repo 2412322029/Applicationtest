@@ -23,8 +23,7 @@ public class Fragment2 extends Fragment {
     private RecyclerView recyclerView;
     private Context context;
     private Adapter myadapter;
-    private List<String> list=new ArrayList<>();
-
+    private List<String> list = new ArrayList<>();
 
 
     @Override
@@ -32,17 +31,18 @@ public class Fragment2 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view;
-        view= inflater.inflate(R.layout.tab02, container, false);
+        view = inflater.inflate(R.layout.tab02, container, false);
 
-        recyclerView=view.findViewById(R.id.recyclerView1);
+        recyclerView = view.findViewById(R.id.recyclerView1);
         listdata();
         Viewinit();
 
         return view;
 
     }
+
     private void Viewinit() {
-        context=this.getActivity();
+        context = this.getActivity();
         myadapter = new Adapter(context);
         //设置LayoutManager
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context);
@@ -54,7 +54,7 @@ public class Fragment2 extends Fragment {
         myadapter.list(list);
     }
 
-    private void  listdata(){
+    private void listdata() {
         list.add("明媚的阳光和明媚的少女······是不是很相衬呢？");
         list.add("别动哦，借你的眼睛照照镜子。是不是觉得很怀念？");
         list.add("我的眼睛漂亮吗？这可不是美瞳哦，是美少女的魔法。");
@@ -73,5 +73,5 @@ public class Fragment2 extends Fragment {
         list.add("你该休息了，别担心，明天我也会在这里等你的。");
 
     }
-    
+
 }

@@ -21,12 +21,11 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageView imageView1,imageView2,imageView3,imageView4;
-    private TextView textView1,textView2,textView3,textView4;
+    private ImageView imageView1, imageView2, imageView3, imageView4;
+    private TextView textView1, textView2, textView3, textView4;
     private Fragment fragment1, fragment2, fragment3, fragment4;
     private LinearLayout linearLayout1, linearLayout2, linearLayout3, linearLayout4;
     private FragmentManager manager;
-
 
 
     @Override
@@ -52,34 +51,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
 
-
         event_init();
         fragment_init();
 
 
-
     }
-    private void fragment_init(){
+
+    private void fragment_init() {
         fragment1 = new Fragment1();
         fragment2 = new Fragment2();
         fragment3 = new Fragment3();
         fragment4 = new Fragment4();
-        Log.d("ffff","init");
+        Log.d("ffff", "init");
 
         manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction()
                 .add(R.id.frameLayout, fragment1)
-                .add(R.id.frameLayout,fragment2)
-                .add(R.id.frameLayout,fragment3)
-                .add(R.id.frameLayout,fragment4)
+                .add(R.id.frameLayout, fragment2)
+                .add(R.id.frameLayout, fragment3)
+                .add(R.id.frameLayout, fragment4)
                 .hide(fragment2)
                 .hide(fragment3)
-                .hide(fragment4)
-                ;
+                .hide(fragment4);
         transaction.commit();
 
     }
-    private void event_init(){
+
+    private void event_init() {
         linearLayout1 = findViewById(R.id.LinearLayout1);
         linearLayout2 = findViewById(R.id.LinearLayout2);
         linearLayout3 = findViewById(R.id.LinearLayout3);
@@ -90,15 +88,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         linearLayout3.setOnClickListener(this);
         linearLayout4.setOnClickListener(this);
         //四个svg
-        imageView1=findViewById(R.id.imageView1);
-        imageView2=findViewById(R.id.imageView2);
-        imageView3=findViewById(R.id.imageView3);
-        imageView4=findViewById(R.id.imageView4);
+        imageView1 = findViewById(R.id.imageView1);
+        imageView2 = findViewById(R.id.imageView2);
+        imageView3 = findViewById(R.id.imageView3);
+        imageView4 = findViewById(R.id.imageView4);
         //四个文字
-        textView1=findViewById(R.id.textView1);
-        textView2=findViewById(R.id.textView2);
-        textView3=findViewById(R.id.textView3);
-        textView4=findViewById(R.id.textView4);
+        textView1 = findViewById(R.id.textView1);
+        textView2 = findViewById(R.id.textView2);
+        textView3 = findViewById(R.id.textView3);
+        textView4 = findViewById(R.id.textView4);
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -122,15 +120,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void hideall(FragmentTransaction transaction){
+    private void hideall(FragmentTransaction transaction) {
         transaction.hide(fragment1)
                 .hide(fragment2)
                 .hide(fragment3)
                 .hide(fragment4);
-        Log.d("ffff","hide");
+        Log.d("ffff", "hide");
     }
 
-    private void rebu(){
+    private void rebu() {
         imageView1.setImageResource(R.drawable.ic___wx);
         textView1.setTextColor(0xFF000000);
         imageView2.setImageResource(R.drawable.ic___txl);
@@ -153,7 +151,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 rebu();
                 imageView1.setImageResource(R.drawable.ic___wx_this);
                 textView1.setTextColor(0xFF07C060);
-                Log.d("show","case1")
+                Log.d("show", "case1")
                 ;
                 break;
             case 2:
@@ -162,7 +160,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 rebu();
                 imageView2.setImageResource(R.drawable.ic___txl_this);
                 textView2.setTextColor(0xFF07C060);
-                Log.d("show","case2")
+                Log.d("show", "case2")
                 ;
                 break;
             case 3:
@@ -171,7 +169,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 rebu();
                 imageView3.setImageResource(R.drawable.ic___fx_this);
                 textView3.setTextColor(0xFF07C060);
-                Log.d("show","case3")
+                Log.d("show", "case3")
                 ;
                 break;
             case 4:
@@ -193,12 +191,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         private Activity activity;
 
         //初始化activity
-        public StatusBar(Activity activity){
+        public StatusBar(Activity activity) {
             this.activity = activity;
         }
 
         //将状态栏设置为传入的color
-        public void setStatusBarColor(int color){
+        public void setStatusBarColor(int color) {
             if (Build.VERSION.SDK_INT >= 21) {
                 View view = activity.getWindow().getDecorView();
                 view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
@@ -208,9 +206,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
 
-
     }
-
 
 
 }

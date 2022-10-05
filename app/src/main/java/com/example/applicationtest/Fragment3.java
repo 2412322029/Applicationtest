@@ -24,7 +24,7 @@ public class Fragment3 extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        WebView myWebView = (WebView)  getActivity().findViewById(R.id.webview);
+        WebView myWebView = (WebView) getActivity().findViewById(R.id.webview);
         myWebView.loadUrl("https://lolik.me/");
     }
 

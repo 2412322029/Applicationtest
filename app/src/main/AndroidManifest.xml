@@ -6,16 +6,18 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/icon64_appwx_logo"
+        android:icon="@drawable/ic___fx"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/icon64_appwx_logo"
+        android:roundIcon="@drawable/ic___fx"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+        android:networkSecurityConfig="@xml/network_config"
         tools:targetApi="31">
 
         <activity
@@ -28,7 +30,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".TabActivity" />
-        <activity android:name=".TwoActivity" />
+        <activity android:name=".other.TwoActivity" />
     </application>
 
 
