@@ -97,6 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textView2 = findViewById(R.id.textView2);
         textView3 = findViewById(R.id.textView3);
         textView4 = findViewById(R.id.textView4);
+        imageView1.setImageResource(R.drawable.ic___wx_this);
     }
 
     @SuppressLint("NonConstantResourceId")

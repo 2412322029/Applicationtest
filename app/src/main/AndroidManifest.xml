@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -14,12 +14,14 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/ic___fx"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_config"
         android:roundIcon="@drawable/ic___fx"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
-        android:networkSecurityConfig="@xml/network_config"
         tools:targetApi="31">
-
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -32,6 +34,5 @@
         <activity android:name=".TabActivity" />
         <activity android:name=".other.TwoActivity" />
     </application>
-
 
 </manifest>

@@ -1,7 +1,9 @@
 package com.example.applicationtest;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.List;
 
 
@@ -22,17 +26,18 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Myholder> {
 
     private List<String> list;
 
+
     public int addimg(int i) {
         if (i % 4 == 0) {
-            return R.drawable.ic___fx;
+            return R.drawable.num_a;
         } else if (i % 4 - 1 == 0) {
-            return R.drawable.ic___me;
+            return R.drawable.num_b;
         } else if (i % 4 - 2 == 0) {
-            return R.drawable.ic___me_this;
+            return R.drawable.num_c;
         } else if (i % 4 - 3 == 0) {
-            return R.drawable.ic___txl;
+            return R.drawable.num_d;
         } else {
-            return R.drawable.body;
+            return R.drawable.ic___fx;
         }
 
     }
@@ -40,6 +45,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Myholder> {
     public Adapter(Context context) {
 
         this.context = context;
+
     }
 
     public void list(List<String> list) {
@@ -67,14 +73,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Myholder> {
         holder.linearLayout_item1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(itemview.getContext(), position + "号:" + list.get(position), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(itemview.getContext(), position + "号:" + list.get(position), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(holder.itemView.getContext(), MainActivity2.class);
+                intent.putExtra("msg","position:"+position+"\n"+list.get(position));
+                context.startActivity(intent);
 
             }
         });
-        {
 
-
-        }
 
     }
 
@@ -84,6 +90,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Myholder> {
     }
 
     public static class Myholder extends RecyclerView.ViewHolder {
+
         private TextView textView1, textView2;
         private ImageView imageView_item1;
         private LinearLayout linearLayout_item1;
@@ -95,6 +102,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Myholder> {
             imageView_item1 = itemView.findViewById(R.id.imageView_item1);
             linearLayout_item1 = itemView.findViewById(R.id.linearLayout_item1);
 
+
         }
     }
+
 }
