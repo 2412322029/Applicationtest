@@ -3,22 +3,15 @@ package com.example.applicationtest;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.Handler;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.List;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.Myholder> {
@@ -40,13 +33,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Myholder> {
         } else {
             return R.drawable.ic___fx;
         }
-
     }
-
     public Adapter(Context context) {
 
         this.context = context;
-
     }
 
     public void list(List<String> list) {
@@ -54,7 +44,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Myholder> {
         notifyDataSetChanged();
 
     }
-
 
     @NonNull
     @Override
@@ -118,12 +107,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Myholder> {
                 return true;
             }
         });
-
-
     }
-
-
-
     //  删除数据
     @SuppressLint("NotifyDataSetChanged")
     public void onSwiped(int p) {
