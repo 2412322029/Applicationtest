@@ -3,6 +3,7 @@ package com.example.applicationtest;
 import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
 import android.widget.SeekBar;
@@ -14,6 +15,7 @@ public class MyService extends Service {
     private MediaPlayer mediaPlayer;
     private String url;
     private SeekBar seekBar;
+    private Mybinder binder;
 
 
     public MyService() {
@@ -73,15 +75,29 @@ public class MyService extends Service {
     @Override
     public IBinder onBind(Intent intent) {
 //         TODO: Return the communication channel to the service.
-        throw new UnsupportedOperationException("Not yet implemented");
-
+//        throw new UnsupportedOperationException("Not yet implemented");
+        Mybinder binder = new Mybinder();
+        return binder;
     }
+
+    class Mybinder extends Binder{
+        public  void  myplay(){
+            mediaPlayer=MediaPlayer.create(getApplicationContext(),R.raw.flower);
+            mediaPlayer.start();
+
+//            int time=mediaPlayer.getDuration();
+//            seekBar.setMax(time);
+//            new MyThread().start();
+
+        }
+    }
+
+
     class MyThread extends Thread{
         @Override
         public void run() {
             super.run();
             while(seekBar.getProgress()<seekBar.getMax()){
-                //获得音乐当前的播放位置
                 int currentPosition=mediaPlayer.getCurrentPosition();
                 seekBar.setProgress(currentPosition);
             }

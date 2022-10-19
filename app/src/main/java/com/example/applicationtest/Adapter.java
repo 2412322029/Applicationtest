@@ -2,7 +2,6 @@ package com.example.applicationtest;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -10,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
@@ -86,9 +87,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Myholder> {
                         break;
                     case MotionEvent.ACTION_UP://当触点松开时被触发。
                         if (Math.abs((int) event.getRawX() - X)<2){//单击，点击坐标没发生变化
-                            Intent intent = new Intent(holder.itemView.getContext(), MainActivity2.class);
-                            intent.putExtra("msg","position:"+position+"\n"+list.get(position));
-                            context.startActivity(intent);
+                            Toast.makeText(itemview.getContext(), position + "号:" + list.get(position), Toast.LENGTH_SHORT).show();
+//                            Intent intent = new Intent(holder.itemView.getContext(), MainActivity.class);
+//                            intent.putExtra("msg","position:"+position+"\n"+list.get(position));
+//                            context.startActivity(intent);
                         }
                         if(Math.abs(((int) event.getRawX() - X))<200){
                             holder.linearLayout_item1.setLeft(0);
@@ -133,7 +135,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Myholder> {
             textView1 = itemView.findViewById(R.id.textView_item1);
             textView2 = itemView.findViewById(R.id.textView_item2);
             imageView_item1 = itemView.findViewById(R.id.imageView_item1);
-            linearLayout_item1 = itemView.findViewById(R.id.linearLayout_item1);
+            linearLayout_item1 = itemView.findViewById(R.id.linearLayout_forresult);
 
 
         }

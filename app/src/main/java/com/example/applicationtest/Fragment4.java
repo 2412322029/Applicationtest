@@ -103,7 +103,7 @@ public class Fragment4 extends Fragment {
 
     private void Viewinit() {
         context = this.getActivity();
-        //fullview=getView();
+
         myadapter = new musicAdapter(context);
         //设置LayoutManager
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context);

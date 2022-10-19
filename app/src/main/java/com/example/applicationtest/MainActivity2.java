@@ -28,6 +28,9 @@ public class MainActivity2 extends AppCompatActivity {
     private String url;
     public Context context;
     private Intent intent1;
+    private Intent intent2;
+    private MyService.Mybinder mybinder;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +51,35 @@ public class MainActivity2 extends AppCompatActivity {
         Glide.with(context).load("https://cdn.unrun.top/blog/music/" +cover).into(imageView_music);
 
         play();
+
+        intent2 = new Intent(this,MyService.class);
+        Button button_bond=findViewById(R.id.button_bond);
+        Button button_unbond=findViewById(R.id.button_unbond);
+
+        ServiceConnection connection=new ServiceConnection() {
+            @Override
+            public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
+                mybinder =(MyService.Mybinder)iBinder;
+                mybinder.myplay();
+            }
+
+            @Override
+            public void onServiceDisconnected(ComponentName componentName) {
+                mybinder=null;
+            }
+        };
+        button_bond.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                bindService(intent2,connection,Context.BIND_AUTO_CREATE);
+            }
+        });
+        button_unbond.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                unbindService(connection);
+            }
+        });
 
     }
 
@@ -80,6 +112,9 @@ public class MainActivity2 extends AppCompatActivity {
 
             }
         });
+
+
+
     }
 
 
@@ -87,40 +122,32 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         Log.d("twh","onStart");
-
-
     }
-
     @Override
     protected void onPause() {
         super.onPause();
 
         Log.d("twh","onPause");
     }
-
     @Override
     protected void onResume() {
         super.onResume();
         Log.d("twh","onResume");
     }
-
     @Override
     protected void onRestart() {
         super.onRestart();
         Log.d("twh","onRestart");
     }
-
     @Override
     protected void onStop() {
         super.onStop();
         Log.d("twh","onStop");
     }
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
         stopService(intent1);
         Log.d("twh","onDestroy");
     }
-
 }
