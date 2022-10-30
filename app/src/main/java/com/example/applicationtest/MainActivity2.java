@@ -85,6 +85,9 @@ public class MainActivity2 extends AppCompatActivity {
 
     private void play( ) {
         musicserver=new MyService();
+        // TODO 删下一行
+        url="https://cdn.unrun.top/blog/music/1.mp3";
+
         Log.d("xxxx",url);
         btb_start = findViewById(R.id.button_start);
         seekBar=findViewById(R.id.seekBar);

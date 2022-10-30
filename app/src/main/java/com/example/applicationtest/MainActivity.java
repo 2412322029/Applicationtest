@@ -1,13 +1,17 @@
 package com.example.applicationtest;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -18,6 +22,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -54,7 +59,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         event_init();
         fragment_init();
 
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECEIVE_SMS) != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this,new String[]{"android.permission.RECEIVE_SMS"},1);
+        }
 
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode){
+            case 1:
+                if(grantResults[0]!=PackageManager.PERMISSION_GRANTED){
+                    Toast.makeText(this, "未授权，无法实现预定的功能！", Toast.LENGTH_SHORT).show();
+                    finish();
+                }else{
+                    Toast.makeText(this, "请发一条短信验证...", Toast.LENGTH_SHORT).show();
+                }
+        }
     }
 
     private void fragment_init() {
